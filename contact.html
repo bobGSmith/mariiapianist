@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Mariia Zhornikova</title>
+  <meta name="description" content="Contact Mariia Zhornikova for piano lessons and performance bookings." />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" href="assets/img/favicon.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="assets/img/favicon.png" />
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Primary">
+        <a class="brand" href="index.html">
+          <span class="dot" aria-hidden="true"></span>
+          <span>Mariia Zhornikova</span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" data-nav-toggle>
+          Menu
+        </button>
+
+        <div class="nav-links" data-nav-links>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="teaching.html">Teaching</a>
+          <a href="media.html">Media</a>
+          <a href="performances.html">Performances</a>
+          <a href="contact.html" aria-current="page">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <div class="container">
+      <section class="card">
+        <h1 style="margin-top:0;">Contact</h1>
+        <p class="muted">
+          For lessons and performance bookings, use the form below (it opens your email app),
+          or contact Mariia directly.
+        </p>
+
+        <div class="grid">
+          <div class="card col-6">
+            <h2>Direct links</h2>
+
+            <p class="muted" style="margin-bottom:10px;">
+              Email: <a href="mailto:EMAIL_HERE">EMAIL_HERE</a><br />
+              Instagram: <a href="https://www.instagram.com/mariia_pianogirl/" target="_blank" rel="noopener">@mariia_pianogirl</a>
+            </p>
+
+            <div class="btn-row">
+              <button class="btn" type="button" data-copy-email data-email="EMAIL_HERE">Copy email</button>
+              <a class="btn" href="mailto:EMAIL_HERE?subject=Enquiry%20—%20Mariia%20Zhornikova">Open email</a>
+              <a class="btn" href="https://www.instagram.com/mariia_pianogirl/" target="_blank" rel="noopener">Message on Instagram</a>
+            </div>
+
+            <small>
+              Replace <code>EMAIL_HERE</code> with Mariia’s real email address.
+            </small>
+          </div>
+
+          <div class="card col-6">
+            <h2>What to include</h2>
+            <ul>
+              <li><strong>Lessons:</strong> level, goals, preferred day/time, online or in-person</li>
+              <li><strong>Performances:</strong> date, location, duration, piano availability, repertoire preferences</li>
+              <li>Your phone number (optional)</li>
+            </ul>
+          </div>
+
+          <div class="card col-12">
+            <h2>Enquiry form</h2>
+
+            <!-- mailto form: opens visitor's email client; no subscription or backend required -->
+            <form class="form"
+              action="mailto:EMAIL_HERE"
+              method="post"
+              enctype="text/plain">
+
+              <div>
+                <label for="type">Enquiry type</label>
+                <select id="type" name="Enquiry type">
+                  <option>Lessons</option>
+                  <option>Performance</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="name">Name</label>
+                <input id="name" name="Name" autocomplete="name" required />
+              </div>
+
+              <div>
+                <label for="reply">Email</label>
+                <input id="reply" name="Reply email" type="email" autocomplete="email" required />
+              </div>
+
+              <div>
+                <label for="details">Message</label>
+                <textarea id="details" name="Message" required
+                  placeholder="Tell Mariia what you're looking for (dates/times, level, event details, etc.)"></textarea>
+              </div>
+
+              <div class="btn-row">
+                <button class="btn primary" type="submit">Open email draft</button>
+                <button class="btn" type="reset">Clear</button>
+              </div>
+
+              <small>
+                This opens your email app to send the message.
+                If you want a true “send directly from the website” form later, we can add Netlify Forms (often free) while keeping the site static.
+              </small>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-row">
+        <div>© <span id="year"></span> Mariia Zhornikova</div>
+        <div><a href="contact.html">Contact</a> · <a href="media.html">Media</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Media — Mariia Zhornikova</title>
+  <meta name="description" content="Selected clips & reels from Mariia Zhornikova." />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" href="assets/img/favicon.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="assets/img/favicon.png" />
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Primary">
+        <a class="brand" href="index.html"><span class="dot" aria-hidden="true"></span><span>Mariia Zhornikova</span></a>
+        <button class="nav-toggle" type="button" aria-expanded="false" data-nav-toggle>Menu</button>
+        <div class="nav-links" data-nav-links>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="teaching.html">Teaching</a>
+          <a href="media.html" aria-current="page">Media</a>
+          <a href="performances.html">Performances</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <div class="container">
+      <section class="card">
+        <h1 style="margin-top:0;">Media</h1>
+        <p class="muted">
+          Clips from YouTube and Instagram. For the newest reels and posts, click the Instagram button below.
+        </p>
+
+        <div class="btn-row">
+          <a class="btn" href="https://www.instagram.com/mariia_pianogirl/" target="_blank" rel="noopener">Instagram</a>
+          <a class="btn" href="https://www.instagram.com/mariia_pianogirl/reels/" target="_blank" rel="noopener">Reels</a>
+          <a class="btn" href="https://www.youtube.com/watch?v=JRH0ZiRyTVE" target="_blank" rel="noopener">YouTube</a>
+        </div>
+
+        <hr />
+
+        <h2>YouTube</h2>
+        <div class="embed-grid">
+          <div class="embed" aria-label="YouTube video">
+            <iframe
+              src="https://www.youtube.com/embed/JRH0ZiRyTVE"
+              title="YouTube video player"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+          <!-- Add more YouTube embeds here if you have -->
+        </div>
+
+        <hr />
+
+        <h2>Instagram Reels & Clips</h2>
+        <p class="muted">
+          Embedded Instagram posts below. If they don’t load immediately, scroll or click “Instagram” above.
+        </p>
+
+        <!-- Instagram embed 1 -->
+        <div style="margin-top: 18px;">
+          <blockquote class="instagram-media"
+            data-instgrm-permalink="https://www.instagram.com/p/DSnjRbiiCFa/"
+            data-instgrm-version="14"
+            style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.10); border-radius: 16px; padding: 12px;">
+          </blockquote>
+        </div>
+
+        <!-- Instagram embed 2 -->
+        <div style="margin-top: 18px;">
+          <blockquote class="instagram-media"
+            data-instgrm-permalink="https://www.instagram.com/p/DSFiZJYCGxB/"
+            data-instgrm-version="14"
+            style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.10); border-radius: 16px; padding: 12px;">
+          </blockquote>
+        </div>
+
+        <!-- Instagram embed 3 -->
+        <div style="margin-top: 18px;">
+          <blockquote class="instagram-media"
+            data-instgrm-permalink="https://www.instagram.com/p/DR5WRjLCBgH/"
+            data-instgrm-version="14"
+            style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.10); border-radius: 16px; padding: 12px;">
+          </blockquote>
+        </div>
+
+        <!-- Instagram embed script (required) -->
+        <script async defer src="https://www.instagram.com/embed.js"></script>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-row">
+        <div>© <span id="year"></span> Mariia Zhornikova</div>
+        <div><a href="contact.html">Contact</a> · <a href="media.html">Media</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
