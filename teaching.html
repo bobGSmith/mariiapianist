@@ -8,14 +8,78 @@
   <link rel="stylesheet" href="assets/css/styles.css" />
   <link rel="icon" href="assets/img/favicon.png" type="image/png" sizes="32x32" />
   <link rel="apple-touch-icon" href="assets/img/favicon.png" />
-  </head>
-<body>
 
+  <style>
+    /* Page-only layout polish */
+    .teaching-wrap{
+      padding: 60px 0 80px;
+    }
+
+    .teaching-header{
+      margin-bottom: 28px;
+      max-width: 760px;
+    }
+
+    .teaching-header h1{
+      margin: 0 0 12px;
+      font-size: 42px;
+      font-weight: 500;
+    }
+
+    .teaching-grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .panel{
+      border: 1px solid var(--line);
+      padding: 22px;
+      background: #fff;
+    }
+
+    .panel h2{
+      margin: 0 0 12px;
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    .panel ul{
+      margin: 0;
+      padding-left: 18px;
+      color: var(--text);
+    }
+
+    .panel li{
+      margin: 6px 0;
+    }
+
+    .panel.wide{
+      grid-column: 1 / -1;
+    }
+
+    .two-col{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-top: 12px;
+    }
+
+    @media (max-width: 860px){
+      .teaching-wrap{ padding: 40px 0 70px; }
+      .teaching-grid{ grid-template-columns: 1fr; }
+      .two-col{ grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
   <header class="site-header">
     <div class="container">
       <nav class="navbar" aria-label="Primary">
-        <a class="brand" href="index.html"><span class="dot" aria-hidden="true"></span><span>Mariia Zhornikova</span></a>
-        <div class="nav-links" data-nav-links>
+        <a class="brand" href="index.html"><span>Mariia Zhornikova</span></a>
+        <div class="nav-links">
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
           <a href="teaching.html" aria-current="page">Teaching</a>
@@ -27,46 +91,65 @@
     </div>
   </header>
 
-  <main id="content">
-    <div class="container">
-      <section class="card">
-        <h1 style="margin-top:0;">Teaching</h1>
-        <p class="muted">
-          Add your real teaching copy here. Keep it reassuring and concrete.
+  <main>
+    <div class="container teaching-wrap">
+
+      <div class="teaching-header">
+        <h1>Teaching</h1>
+        <p class="muted" style="margin:0;">
+          Lessons are structured, supportive, and tailored to each student — with clear goals, healthy technique,
+          and confident musical expression.
         </p>
+      </div>
 
-        <div class="grid">
-          <div class="card col-6">
-            <h2>What lessons cover</h2>
-            <ul>
-              <li>Technique & injury-prevention habits</li>
-              <li>Musicality, phrasing, tone, pedalling</li>
-              <li>Sight-reading & rhythm</li>
-              <li>Repertoire and practice strategy</li>
-              <li>Exam or audition preparation (optional)</li>
-            </ul>
-          </div>
+      <section class="teaching-grid" aria-label="Teaching information">
 
-          <div class="card col-6">
-            <h2>Formats</h2>
-            <ul>
-              <li>In-person (London)</li>
-              <li>Online (Zoom/Meet)</li>
-              <li>30 / 45 / 60 minute lessons</li>
-              <li>One-off coaching or ongoing weekly slot</li>
-            </ul>
-            <div class="btn-row">
-              <a class="btn primary" href="contact.html">Enquire about lessons</a>
-            </div>
-          </div>
+        <div class="panel">
+          <h2>What lessons cover</h2>
+          <ul>
+            <li>Technical foundations and relaxed, efficient movement</li>
+            <li>Sound, tone, phrasing, articulation, and pedalling</li>
+            <li>Rhythm, reading skills, and musical independence</li>
+            <li>Repertoire planning and effective practice methods</li>
+            <li>Performance preparation and stage confidence</li>
+          </ul>
+        </div>
 
-          <div class="card col-12">
-            <h2>Who it’s for</h2>
-            <p class="muted">
-              Beginners, returners, adult learners, and advanced students wanting a musical, technique-led approach.
-            </p>
+        <div class="panel">
+          <h2>Lesson formats</h2>
+          <ul>
+            <li>In-person (London) or online</li>
+            <li>30 / 45 / 60 minutes</li>
+            <li>Weekly lessons or one-off coaching sessions</li>
+            <li>Optional support for exams, auditions, and competitions</li>
+          </ul>
+
+          <div class="btn-row" style="margin-top: 18px;">
+            <a class="btn primary" href="contact.html">Enquire about lessons</a>
           </div>
         </div>
+
+        <div class="panel wide">
+          <h2>Who it’s for</h2>
+          <p class="muted" style="margin: 0 0 12px;">
+            Mariia teaches a wide range of students and adapts the approach to suit age, level, and goals.
+          </p>
+
+          <div class="two-col">
+            <ul>
+              <li><strong>Children and teenagers</strong> — building strong fundamentals and musical enjoyment</li>
+              <li><strong>Beginners</strong> — starting confidently with clear, step-by-step progression</li>
+              <li><strong>Adult beginners</strong> — supportive coaching and efficient practice strategies</li>
+            </ul>
+
+            <ul>
+              <li><strong>Intermediate and advanced</strong> — refining technique, tone, and interpretation</li>
+              <li><strong>Audition & exam preparation</strong> — structured planning and performance readiness</li>
+              <li><strong>Returning players</strong> — rebuilding confidence and technique after time away</li>
+            </ul>
+          </div>
+        </div>
+
       </section>
     </div>
   </main>
@@ -75,12 +158,16 @@
     <div class="container">
       <div class="footer-row">
         <div>© <span id="year"></span> Mariia Zhornikova</div>
-        <div><a href="contact.html">Contact</a> · <a href="media.html">Media</a></div>
+        <div>
+          <a href="contact.html">Contact</a> ·
+          <a href="https://www.instagram.com/mariia_pianogirl/" target="_blank" rel="noopener">Instagram</a>
+        </div>
       </div>
     </div>
   </footer>
 
-  <script src="assets/js/main.js"></script>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
