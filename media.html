@@ -4,20 +4,67 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Media — Mariia Zhornikova</title>
-  <meta name="description" content="Selected clips & reels from Mariia Zhornikova." />
+  <meta name="description" content="Selected clips from Mariia Zhornikova." />
   <link rel="stylesheet" href="assets/css/styles.css" />
-  <link rel="icon" href="assets/img/favicon.png" type="image/png" sizes="32x32" />
-  <link rel="apple-touch-icon" href="assets/img/favicon.png" />
-</head>
-<body>
-  <a class="skip-link" href="#content">Skip to content</a>
 
+  <style>
+    .media-top{
+      display:flex;
+      align-items:center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin: 0 0 26px;
+    }
+
+    .carousel{
+      border-top: 1px solid var(--line);
+      padding-top: 26px;
+      margin-top: 18px;
+    }
+
+    .carousel-bar{
+      display:flex;
+      align-items:center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+
+    .carousel-controls{
+      display:flex;
+      gap: 10px;
+      align-items:center;
+    }
+
+    .counter{
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .frame{
+      border: 1px solid var(--line);
+      padding: 14px;
+    }
+
+    /* Make Instagram embed sit neatly */
+    .frame blockquote.instagram-media{
+      margin: 0 !important;
+      width: 100% !important;
+    }
+  </style>
+</head>
+
+<body>
   <header class="site-header">
     <div class="container">
       <nav class="navbar" aria-label="Primary">
-        <a class="brand" href="index.html"><span class="dot" aria-hidden="true"></span><span>Mariia Zhornikova</span></a>
-        <button class="nav-toggle" type="button" aria-expanded="false" data-nav-toggle>Menu</button>
-        <div class="nav-links" data-nav-links>
+        <a class="brand" href="index.html"><span>Mariia Zhornikova</span></a>
+
+        <div class="nav-links">
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
           <a href="teaching.html">Teaching</a>
@@ -29,72 +76,32 @@
     </div>
   </header>
 
-  <main id="content">
+  <main>
     <div class="container">
       <section class="card">
-        <h1 style="margin-top:0;">Media</h1>
-        <p class="muted">
-          Clips from YouTube and Instagram. For the newest reels and posts, click the Instagram button below.
-        </p>
+        <div class="media-top">
+          <h1 style="margin:0;">Media</h1>
 
-        <div class="btn-row">
-          <a class="btn" href="https://www.instagram.com/mariia_pianogirl/" target="_blank" rel="noopener">Instagram</a>
-          <a class="btn" href="https://www.instagram.com/mariia_pianogirl/reels/" target="_blank" rel="noopener">Reels</a>
-          <a class="btn" href="https://www.youtube.com/watch?v=JRH0ZiRyTVE" target="_blank" rel="noopener">YouTube</a>
+          <a class="btn"
+             href="https://www.instagram.com/mariia_pianogirl/"
+             target="_blank"
+             rel="noopener">
+            Instagram
+          </a>
         </div>
 
-        <hr />
+        <div class="carousel" aria-label="Media carousel">
+          <div class="carousel-bar">
+            <div class="counter" id="counter">1 / 3</div>
 
-        <h2>YouTube</h2>
-        <div class="embed-grid">
-          <div class="embed" aria-label="YouTube video">
-            <iframe
-              src="https://www.youtube.com/embed/JRH0ZiRyTVE"
-              title="YouTube video player"
-              loading="lazy"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen></iframe>
+            <div class="carousel-controls">
+              <button class="btn" type="button" id="prevBtn" aria-label="Previous">←</button>
+              <button class="btn" type="button" id="nextBtn" aria-label="Next">→</button>
+            </div>
           </div>
-          <!-- Add more YouTube embeds here if you have -->
+
+          <div class="frame" id="embedArea"></div>
         </div>
-
-        <hr />
-
-        <h2>Instagram Reels & Clips</h2>
-        <p class="muted">
-          Embedded Instagram posts below. If they don’t load immediately, scroll or click “Instagram” above.
-        </p>
-
-        <!-- Instagram embed 1 -->
-        <div style="margin-top: 18px;">
-          <blockquote class="instagram-media"
-            data-instgrm-permalink="https://www.instagram.com/p/DSnjRbiiCFa/"
-            data-instgrm-version="14"
-            style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.10); border-radius: 16px; padding: 12px;">
-          </blockquote>
-        </div>
-
-        <!-- Instagram embed 2 -->
-        <div style="margin-top: 18px;">
-          <blockquote class="instagram-media"
-            data-instgrm-permalink="https://www.instagram.com/p/DSFiZJYCGxB/"
-            data-instgrm-version="14"
-            style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.10); border-radius: 16px; padding: 12px;">
-          </blockquote>
-        </div>
-
-        <!-- Instagram embed 3 -->
-        <div style="margin-top: 18px;">
-          <blockquote class="instagram-media"
-            data-instgrm-permalink="https://www.instagram.com/p/DR5WRjLCBgH/"
-            data-instgrm-version="14"
-            style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.10); border-radius: 16px; padding: 12px;">
-          </blockquote>
-        </div>
-
-        <!-- Instagram embed script (required) -->
-        <script async defer src="https://www.instagram.com/embed.js"></script>
       </section>
     </div>
   </main>
@@ -103,14 +110,66 @@
     <div class="container">
       <div class="footer-row">
         <div>© <span id="year"></span> Mariia Zhornikova</div>
-        <div><a href="contact.html">Contact</a> · <a href="media.html">Media</a></div>
+        <div>
+          <a href="contact.html">Contact</a> ·
+          <a href="https://www.instagram.com/mariia_pianogirl/" target="_blank" rel="noopener">Instagram</a>
+        </div>
       </div>
     </div>
   </footer>
 
-  <script src="assets/js/main.js"></script>
+  <!-- Instagram embed script -->
+  <script async defer src="https://www.instagram.com/embed.js"></script>
+
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Update this list whenever you add/remove clips:
+    const INSTAGRAM_ITEMS = [
+      "https://www.instagram.com/p/DSnjRbiiCFa/",
+      "https://www.instagram.com/p/DSFiZJYCGxB/",
+      "https://www.instagram.com/p/DR5WRjLCBgH/"
+    ];
+
+    let idx = 0;
+
+    const embedArea = document.getElementById('embedArea');
+    const counter = document.getElementById('counter');
+
+    function render() {
+      const url = INSTAGRAM_ITEMS[idx];
+      counter.textContent = `${idx + 1} / ${INSTAGRAM_ITEMS.length}`;
+
+      embedArea.innerHTML = `
+        <blockquote class="instagram-media"
+          data-instgrm-permalink="${url}"
+          data-instgrm-version="14">
+        </blockquote>
+      `;
+
+      // Process the new embed
+      if (window.instgrm && window.instgrm.Embeds && typeof window.instgrm.Embeds.process === "function") {
+        window.instgrm.Embeds.process();
+      }
+    }
+
+    document.getElementById('prevBtn').addEventListener('click', () => {
+      idx = (idx - 1 + INSTAGRAM_ITEMS.length) % INSTAGRAM_ITEMS.length;
+      render();
+    });
+
+    document.getElementById('nextBtn').addEventListener('click', () => {
+      idx = (idx + 1) % INSTAGRAM_ITEMS.length;
+      render();
+    });
+
+    // Keyboard arrows
+    document.addEventListener('keydown', (e) => {
+      if (e.key === "ArrowLeft") document.getElementById('prevBtn').click();
+      if (e.key === "ArrowRight") document.getElementById('nextBtn').click();
+    });
+
+    render();
   </script>
 </body>
 </html>
