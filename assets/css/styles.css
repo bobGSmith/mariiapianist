@@ -77,6 +77,18 @@ body{
   color: var(--text);
 }
 
+/* toggle button (hidden on wide screens) */
+.nav-toggle{
+  display:none;
+  background: transparent;
+  border: none;
+  padding: 6px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  color: var(--text);
+}
+
 /* =========================
    Hero Section
 ========================= */
@@ -210,6 +222,51 @@ body{
 
   .nav-links{
     gap:16px;
+  }
+
+  /* Responsive dropdown behaviour */
+  .site-header{
+    position: relative;
+  }
+
+  .nav-toggle{
+    display: inline-block;
+    margin-left: 12px;
+  }
+
+  .nav-toggle svg{
+    display: block;
+    width: 22px;
+    height: 16px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2.2;
+    stroke-linecap: round;
+  }
+
+  /* hide the horizontal links by default on small screens */
+  .nav-links{
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--line);
+    flex-direction: column;
+    padding: 12px 18px;
+    gap: 8px;
+    z-index: 40;
+  }
+
+  /* when opened by JS toggle */
+  .nav-links.is-open{
+    display: flex;
+  }
+
+  .nav-links a{
+    padding: 10px 6px;
+    border-radius: 6px;
   }
 
   .col-6{
